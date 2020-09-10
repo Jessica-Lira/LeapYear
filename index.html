@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leap Year</title>
+
+    <script>
+        //var year = prompt("What's the year you want check? ");
+        var result;
+
+        function isLeap(year) {
+
+            if((year%4)===0){
+                if((year%100)===0){
+                    if((year%400)===0){//divisible by 4, 100 and 400
+                        result = ("Leap year.");
+                    }else{ //divisible by 4 and 100
+                        result = ("Not leap year.");
+                    }
+                }else{ //divisible only by 4
+                    result = ("Leap year.");
+                }
+            }else{ //not divible by 4
+                result = ("Not leap year.");
+            }
+            return result;
+        }
+
+        isLeap(1992);
+        console.log(result);
+        //alert(result);
+
+    </script>
+
+</head>
+<body>
+    <h1>Leap Year</h1>
+    <p>A normal year has 365 days, leap years have 366.</p>
+    <p><a href="https://www.youtube.com/watch?v=xX96xng7sAE">Video about that.</a></p>
+    <br><br><br>
+    <p>A year is a leap year if it is evenly divisible by 4;</p>
+    <p>except if that is also evenly divisible by 100;</p>
+    <p>unless that year is also evenly divisible by 400.</p>
+
+    <br>
+    <img src="flowchart.png" alt="flowchart-logic">
+</body>
+</html>
